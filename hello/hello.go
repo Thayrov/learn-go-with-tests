@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package hello
 
 const (
 	salutationEN = "Hello, "
@@ -35,8 +33,4 @@ func salutationSelector(lang string) (salutation string) {
 		salutation = salutationEN
 	}
 	return
-}
-
-func main() {
-	fmt.Println(Hello("world", ""))
 }
