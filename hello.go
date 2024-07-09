@@ -2,29 +2,39 @@ package main
 
 import "fmt"
 
-const salutationEN = "Hello, "
-const salutationES = "Hola, "
-const salutationFR = "Bonjour, "
+const (
+	salutationEN = "Hello, "
+	salutationES = "Hola, "
+	salutationFR = "Bonjour, "
+	salutationIT = "Ciao, "
 
-const es = "Spanish"
-const en = "English"
-const fr = "French"
+	es = "Spanish"
+	en = "English"
+	fr = "French"
+	it = "Italian"
+)
 
 func Hello(name string, lang string) string {
-	salutation := ""
 	if name == "" {
 		name = "World"
 	}
-	if lang == en || lang == "" {
+	return salutationSelector(lang) + name + "!"
+}
+
+func salutationSelector(lang string) (salutation string) {
+	switch lang {
+	case en:
+		salutation = salutationEN
+	case es:
+		salutation = salutationES
+	case fr:
+		salutation = salutationFR
+	case it:
+		salutation = salutationIT
+	default:
 		salutation = salutationEN
 	}
-	if lang == es {
-		salutation = salutationES
-	}
-	if lang == fr {
-		salutation = salutationFR
-	}
-	return salutation + name + "!"
+	return
 }
 
 func main() {
