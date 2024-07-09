@@ -36,7 +36,7 @@ func TestHello(t *testing.T) {
 func ExampleHello() {
 	got := Hello("Josh", "French")
 	fmt.Println(got)
-	// Output: "Bonjour, Josh!"
+	// Output: Bonjour, Josh!
 }
 
 func assertCorrectMessage(t testing.TB, got, want string) {
