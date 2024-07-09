@@ -4,9 +4,11 @@ import "fmt"
 
 const salutationEN = "Hello, "
 const salutationES = "Hola, "
+const salutationFR = "Bonjour, "
 
 const es = "Spanish"
 const en = "English"
+const fr = "French"
 
 func Hello(name string, lang string) string {
 	salutation := ""
@@ -18,6 +20,9 @@ func Hello(name string, lang string) string {
 	}
 	if lang == es {
 		salutation = salutationES
+	}
+	if lang == fr {
+		salutation = salutationFR
 	}
 	return salutation + name + "!"
 }
